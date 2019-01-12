@@ -1,6 +1,270 @@
+## [墨客中文发布信息](READMECH.md)
+
+## MOAC Nuwa 1.0.x 
+
+### Nuwa v1.0.6: 
+
+Nuwa v1.0.6 is a package released for both mainnet and testnet. 
+It enable the cross-chain atomic swap of tokens between MicroChains and MotherChain.
+
+For VNODE users:
+* If you want to use the cross-chain atomic swap, you need to upgrade the VNODE software to this version v1.0.6.
+* If you only mining or monitoring the network, you don't have to upgrade your VNODE software.
+
+For SCS users:
+* Please upgrade to this version to allow cross-chain atomic swap functions.
+* Please also use the MicroChain contracts provided with v1.0.6.
+
+VNODE
+
+* Enable the cross-chain atomic swap of tokens between MicroChains and MotherChain;
+* Fixed the issues found in the v1.0.5;
+
+SCS
+
+* Enable the cross-chain atomic swap of tokens between MicroChains and MotherChain;
+* Support proxy server cache and added NotifySyncEvent in proxy server;
+
+
+**Download links**
+
+VNODE+SCS client
+
+* [Binary package for Linux](https://github.com/MOACChain/moac-core/releases/download/v1.0.6/nuwa1.0.6.linux.tar.gz)
+* [Binary package for Windows](https://github.com/MOACChain/moac-core/releases/download/v1.0.6/nuwa1.0.6.win.zip)
+* [Binary package for MAC OS](https://github.com/MOACChain/moac-core/releases/download/v1.0.6/nuwa1.0.6.mac.tar.gz)
+
+MicroChain contracts v1.0.6
+
+* [SubChainProtocolBase.sol](https://github.com/MOACChain/moac-core/releases/download/v1.0.6/SubChainProtocolBase.sol)
+* [VnodeProtocolBase.sol](https://github.com/MOACChain/moac-core/releases/download/v1.0.6/VnodeProtocolBase.sol)
+* [SubChainBaseAST.sol](https://github.com/MOACChain/moac-core/releases/download/v1.0.6/SubChainBaseAST.sol)
+* [dappbase.sol](https://github.com/MOACChain/moac-core/releases/download/v1.0.6/dappbase.sol)
+
+### Nuwa v1.0.5: 
+
+Nuwa v1.0.5 is a package released for both mainnet and testnet. It enable all the functionality of MicroChain and fixed a few issues discovered during the test.
+It provides JSON-RPC commands for the SCS server.
+
+For VNODE users:
+* If you want to become a VNODE proxy and join MicroChain mining, you need to upgrade the VNODE software to this version v1.0.5.
+* If you only mining or monitoring the network, you don't need to upgrade your VNODE software.
+
+For SCS users:
+* Please upgrade to this version as soon as possible to allow MicroChain usage.
+* Please also use the MicroChain contracts provided with v1.0.5.
+
+VNODE
+
+* Enabled the whitelist for Microchains in the mainnet;
+* Increased SubChainBase contract functions;
+* Fixed the issues found in the test process;
+
+SCS
+
+* Fixed the bugs in HandleProposalDistribute and getCurNodeList  functions;
+* Modified the way to get account nonce;
+* In command line flags, changed 'rpc1' to 'rpcdebug', 'rpc2' to 'rpc';
+* Used 'rpccorsdomain' flag to control the domains from which to accept cross origin requests;
+
+
+**Download links**
+
+VNOD + SCS client v1.0.5
+
+* [Binary package for Linux](https://github.com/MOACChain/moac-core/releases/download/v1.0.5/nuwa1.0.5.linux.tar.gz)
+* [Binary package for Windows](https://github.com/MOACChain/moac-core/releases/download/v1.0.5/nuwa1.0.5.win.zip)
+* [Binary package for MAC OS](https://github.com/MOACChain/moac-core/releases/download/v1.0.5/nuwa1.0.5.mac.tar.gz)
+
+MicroChain contracts v1.0.5
+
+* [SubChainProtocolBase](https://github.com/MOACChain/moac-core/releases/download/v1.0.5/SubChainProtocolBase.sol)
+* [VnodeProtocolBase](https://github.com/MOACChain/moac-core/releases/download/v1.0.5/VnodeProtocolBase.sol)
+* [SubChainBase](https://github.com/MOACChain/moac-core/releases/download/v1.0.5/SubChainBase.sol)
+
+### Nuwa 1.0.4:
+
+Release Date: 10/31/2018
+
+This release is for testnet only.
+It fixed a few issues discovered during the test.
+It provides JSON-RPC commands for the SCS server in addition to nuwa1.0.3 RPC commands.
+A video tutorial can be found on MOAC youtube channel.
+For Linux and Windows platform, we provided both 386 and amd64 compilations.
+
+VNODE
+
+* Discarded the vnode address error in vnodeconfig.json when scsservice is false;
+* NotifiedSCS only for mining SCS;
+* Fixed the issues found in the flush process;
+
+SCS
+
+* Fixed an "out of gas" error when calling contract function using JSON-RPC calls
+* Fixed some issues found in the flush process;
+* Provided a new command options, user can use -h to see the new options ;
+* Added JSON-RPC rpc interfaces with new RPC commands;
+
+
+**Download links**
+
+VNODE + SCS client
+
+* [Binary package for Linux](https://github.com/MOACChain/moac-core/releases/download/v1.0.4/nuwa1.0.4.linux.tar.gz)
+* [Binary package for Windows](https://github.com/MOACChain/moac-core/releases/download/v1.0.4/nuwa1.0.4.win.zip)
+* [Binary package for MAC OS](https://github.com/MOACChain/moac-core/releases/download/v1.0.4/nuwa1.0.4.mac.tar.gz)
+
+
+### Nuwa 1.0.3:
+
+Release Date: 09/29/2018
+
+This release is for testnet only.
+It fixed a few issues discovered during our pressure test on the microchain and implement new RPC commands for the SCS server.
+
+We also update the MicroChain protocol contracts. Please use the new contracts with the updated servers.
+
+**Download links**
+
+VNODE + SCS client
+
+* [Binary package for Linux](https://github.com/MOACChain/moac-core/releases/download/v1.0.3/nuwa1.0.3.ubuntu.tar.gz)
+* [Binary package for Windows](https://github.com/MOACChain/moac-core/releases/download/v1.0.3/nuwa1.0.3.win.zip)
+* [Binary package for MAC OS](https://github.com/MOACChain/moac-core/releases/download/v1.0.3/nuwa1.0.3.mac.tar.gz)
+
+MicroChain contracts v1.0.3
+
+* [SubChainProtocolBase](https://github.com/MOACChain/moac-core/releases/download/v1.0.3/SubChainProtocolBase.sol)
+* [VnodeProtocolBase](https://github.com/MOACChain/moac-core/releases/download/v1.0.3/VnodeProtocolBase.sol)
+* [SubChainBase](https://github.com/MOACChain/moac-core/releases/download/v1.0.3/SubChainBase.sol)
+
+
+### FileStorm:
+Release Date: 08/27/2018
+
+Added some small enhancements.
+[FileStorm 1.0.1](https://github.com/MOACChain/moac-core/releases/download/1.0.1/filestorm1.0.1.tar)
+
+Use [deploy.js](https://github.com/MOACChain/moac-core/releases/download/1.0.1/deploy.js) to create one vnode and 3 (or more) scs.
+
+Release Date: 08/18/2018
+
+The FileStorm is a DAPP running on MOAC MicroChain to perform the Interplanetary File System (IPFS) application. It requires a custom SCS client. The SCS client released works with MOAC VNODE Nuwa 1.0.2.
+
+**Download links**
+
+FileStorm MicroChain protocol:
+
+* [Smart Contract for the FileStorm protocol](https://github.com/MOACChain/moac-core/releases/download/v1.0/DeploySubChainBase.sol)
+
+FileStorm MicroChain:
+
+* [Smart Contract for the FileStorm Dapp](https://github.com/MOACChain/moac-core/releases/download/v1.0/FileStormMicroChain.sol)
+
+Custom SCS client for FileStorm:
+
+* [Binary package for Linux](https://github.com/MOACChain/moac-core/releases/download/v1.0/filestorm.tar)
+<!-- * [Binary package for Windows]()
+* [Binary package for MAC OS]() -->
+
+### Nuwa 1.0.2:
+
+Release Date: 08/10/2018
+
+Thanks for the support from the community, MOAC mainnet upgraded successfully from Pangu to Nuwa after block number 647,200. The VNODE and SCS clients release 1.0.2 can be used to build MicroChain and enable the MicroChain mining in both testnet and mainnet.
+To help the developers to try the SCS mining, we has a website providing information in the testnet, please check [Testnet MicroChain Information](https://nodes101.moac.io/) and [instructions to start SCS](https://github.com/MOACChain/moac-core/wiki/MicroChainSCSMining).
+
+**Download links**
+
+VNODE client
+
+* [Binary package for Linux](https://github.com/MOACChain/moac-core/releases/download/v1.0.2/nuwa-vnode1.0.2.ubuntu.tar.gz)
+* [Binary package for Windows](https://github.com/MOACChain/moac-core/releases/download/v1.0.2/nuwa-vnode1.0.2.win.zip)
+* [Binary package for MAC OS](https://github.com/MOACChain/moac-core/releases/download/v1.0.2/nuwa-vnode1.0.2.mac.tar.gz)
+
+SCS client
+
+* [Binary package for Linux](https://github.com/MOACChain/moac-core/releases/download/v1.0.2/nuwa-scs1.0.2.ubuntu.tar.gz)
+* [Binary package for Windows](https://github.com/MOACChain/moac-core/releases/download/v1.0.2/nuwa-scs1.0.2.zip)
+* [Binary package for MAC OS](https://github.com/MOACChain/moac-core/releases/download/v1.0.2/nuwa-scs1.0.2.mac.tar.gz)
+
+
+
+### Nuwa 1.0.1:
+
+Release Date: 08/01/2018
+
+This release is to fix a bug that event subscription in some machines does not work.
+
+**Download links**
+
+VNODE client
+
+* [Binary package for Linux](https://github.com/MOACChain/moac-core/releases/download/v1.0.1/nuwa1.0.1.ubuntu.tar.gz)
+* [Binary package for Windows](https://github.com/MOACChain/moac-core/releases/download/v1.0.1/nuwa1.0.1.win.zip)
+* [Binary package for MAC OS](https://github.com/MOACChain/moac-core/releases/download/v1.0.1/nuwa1.0.1.mac.tar.gz)
+
+### Nuwa 1.0.0:
+
+Release Date: 07/31/2018
+
+**Major Progress：**
+
+* Fully functional VNODE to support MicroChain;
+* Fully functional SCS server to support MicroChain；
+* Enabled VNODE to get rewards from MicroChain mining;
+* MicroChain protocol smart contract;
+* MicroChain base smart contract that supports POS consensus;
+* Fully functional MicroChain supports sharding;
+* Supports FileStorm Protocol for IPFS MicroChain; 
+* Supports MicroChain without token;
+
+**Available feature：**
+
+* MicroChain mining through SCSs and MicroChain contracts;
+* MicroChain supports POS consensus;
+* IPFS MicroChain support.
+
+
+SCS server
+
+Will be released on 08/08/2018.
+
+
 ## MOAC Pangu 0.8.x 
 
-### This release is for MOAC project Pangu 0.8.2:
+### Pangu 0.8.4:
+
+Release Date: 06/30/2018
+
+This release is for testnet only. 
+
+**Updates：**
+
+* Smart Contract Server(SCS) is released for public testing. Users can run the SCS and connect to the testnet. They can also get mining rewards from MicroChain.
+* The MOAC client can connect with SCSs.
+* MicroChain can be deployed on SCSs with instructions. 
+
+**Other tools and useful links**
+
+
+* [MOAC explorer](http://explorer.moac.io/), (*mainnet*), network info, [Account list](), [ERC20 token](http://explorer.moac.io/tokenlist20), and [ERC721 token](http://explorer.moac.io/tokenlist721)
+* [MOAC testnet explorer](http://testnet.moac.io:3000/home), (*testnet*)
+* [MOAC online wallet](https://moacwalletonline.com/)
+
+**Connecting with MOAC community**
+
+* [Official Website](https://moac.io)
+* [Blog/Medium](https://medium.com/@moac_io)
+* [Facebook](https://www.facebook.com/moacchain/)
+* [Twitter](https://twitter.com/moac_io)
+* [Reddit](https://www.reddit.com/r/MOAC/)
+* [LinkedIn](https://www.linkedin.com/company/moac-chain)
+* [Telegram Developers](https://t.me/MOACDevelopers)
+* [Telegram English Users](https://t.me/moacblockchain)
+* [Youtube for Developers](https://www.youtube.com/channel/UC_U54wsGNrm_Yivj5bH9i7Q)
+
+### Pangu 0.8.2:
 
 Release Date: 04/30/2018
 
@@ -17,7 +281,7 @@ The mainnet was launched on April 30th, 2018.
 * [MOAC explorer](http://explorer.moac.io/), (*mainnet*)
 * [MOAC testnet explorer](http://47.75.144.55:3000/home), (*testnet*)
 
-### This release is for MOAC project Pangu 0.8.1:
+### Pangu 0.8.1:
 
 Release Date: 04/18/2018
 
@@ -32,7 +296,7 @@ This release is for testnet only. The mainnet will be available in late April.
 * [Mining], (*provided by third party， updated to the new testnet 101*)
 * [Faucet], (*provided by third party*)
 
-### This release is for MOAC project Pangu 0.8.0:
+### Pangu 0.8.0:
 
 Release Date： 3/31/2018
 

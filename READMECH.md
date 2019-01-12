@@ -1,0 +1,483 @@
+## 墨客中文信息
+
+## [MOAC English](README.md)
+
+## 墨客女娲 1.0.x 
+
+### Nuwa v1.0.6: 
+
+本次发布的软件包可用于主网和测试网。
+修正了之前测试中发现的一些问题，提供了母链和子链之间的原子跨链交易；
+
+
+对于VNODE节点用户
+* 如果要使用跨链功能，必须升级到v1.0.6；
+* 如果只是使用VNODE挖矿，或者作为监听节点，短期内不会有影响，但建议升级；
+
+对于SCS节点用户
+* 如果要使用跨链功能，必须升级到v1.0.6；
+* 必须使用v1.0.6提供的带有跨链功能的子链合约来部署子链；
+
+VNODE
+
+* 在母链上提供了原子跨链功能;
+* 修正之前测试发现的一些问题;
+
+SCS
+
+* 为子链提供了原子跨链功能，可以配合子链DAPP来完成和母链之间的原子交易;
+* 和子链代理节点之间提供了缓存功能，增加了NotifySyncEvent;
+
+
+**Download links**
+
+VNODE+SCS 可执行文件包
+
+* [Binary package for Linux](https://github.com/MOACChain/moac-core/releases/download/v1.0.6/nuwa1.0.6.linux.tar.gz)
+* [Binary package for Windows](https://github.com/MOACChain/moac-core/releases/download/v1.0.6/nuwa1.0.6.win.zip)
+* [Binary package for MAC OS](https://github.com/MOACChain/moac-core/releases/download/v1.0.6/nuwa1.0.6.mac.tar.gz)
+
+MicroChain contracts
+
+带有跨链功能的子链合约
+
+* [SubChainProtocolBase.sol](https://github.com/MOACChain/moac-core/releases/download/v1.0.6/SubChainProtocolBase.sol)
+* [VnodeProtocolBase.sol](https://github.com/MOACChain/moac-core/releases/download/v1.0.6/VnodeProtocolBase.sol)
+* [SubChainBaseAST.sol](https://github.com/MOACChain/moac-core/releases/download/v1.0.6/SubChainBase.sol)
+* [dappbase.sol](https://github.com/MOACChain/moac-core/releases/download/v1.0.6/dappbase.sol)
+
+### Nuwa 1.0.5:
+
+本次发布的软件包可用于主网和测试网。
+修正了之前测试中发现的一些问题，提供了完整的子链功能；
+为用户提供了便于使用的SCS端的JSON-RPC的接口。
+
+对于VNODE节点用户
+* 如果要配置子链，成为子链代理节点（MicroChain Proxy）的，请尽快升级到v1.0.5；
+* 如果只是使用VNODE挖矿，或者作为监听节点，短期内不会有影响，但建议升级；
+
+对于SCS节点用户
+* 必须升级到v1.0.5；
+* 必须使用v1.0.5提供的子链合约来初始部署子链；
+
+VNODE
+
+* 在SubChainBase中增加了更多功能；
+* 在主链上提供了子链whitelist的控制功能;
+* 修正之前测试发现的一些问题;
+
+SCS
+
+* 修正 HandleProposalDistribute 和 getCurNodeList  函数中的问题;
+* 修改 account 在子链上获取 nonce 的方式;
+* 把SCS命令行的 RPC 命令名称进行了修改，之前'rpc1'改为'rpcdebug', 'rpc2'改为'rpc';
+* SCS命令行使用 'rpccorsdomain' 来控制外部访问SCS的功能;
+
+**下载链接**
+
+VNODE+SCS 可执行文件包
+
+* [Binary package for Linux](https://github.com/MOACChain/moac-core/releases/download/v1.0.5/nuwa1.0.5.linux.tar.gz)
+* [Binary package for Windows](https://github.com/MOACChain/moac-core/releases/download/v1.0.5/nuwa1.0.5.win.zip)
+* [Binary package for MAC OS](https://github.com/MOACChain/moac-core/releases/download/v1.0.5/nuwa1.0.5.mac.tar.gz)
+
+MicroChain contracts
+
+* [SubChainProtocolBase.sol](https://github.com/MOACChain/moac-core/releases/download/v1.0.5/SubChainProtocolBase.sol)
+* [VnodeProtocolBase.sol](https://github.com/MOACChain/moac-core/releases/download/v1.0.5/VnodeProtocolBase.sol)
+* [SubChainBase.sol](https://github.com/MOACChain/moac-core/releases/download/v1.0.5/SubChainBase.sol)
+
+### Nuwa 1.0.4:
+
+发布日期: 10/31/2018
+
+本次发布的软件包仅适用于测试网。
+修正了测试中发现的一些问题，SCS端增加了JSON-RPC类型的RPC接口。
+本次发布对linux和windows提供了386和amd64的编译版本.
+
+VNODE
+
+* 修正了配置文件vnodeconfig.json中scsservice设置为false时，via没配置报错；
+* 仅对进行子链确认的SCS节点发送通知;
+* 修正子链对主链的写入确认中的问题;
+
+SCS
+
+* 修正子链对主链的写入确认中的问题;
+* 修改了command line界面的选项，提供了更多信息，可以用"-h"来看最新的信息；
+* 增加多个SCS端JSON-RPC的命令，具体可以参考[文档部分](https://github.com/MOACChain/moac-core/wiki/JSON-RPC)；
+
+
+**下载链接**
+
+VNODE+SCS 可执行文件包
+
+* [Binary package for Linux](https://github.com/MOACChain/moac-core/releases/download/v1.0.4/nuwa1.0.4.linux.tar.gz)
+* [Binary package for Windows](https://github.com/MOACChain/moac-core/releases/download/v1.0.4/nuwa1.0.4.win.zip)
+* [Binary package for MAC OS](https://github.com/MOACChain/moac-core/releases/download/v1.0.4/nuwa1.0.4.mac.tar.gz)
+
+
+### 墨客女娲版本 1.0.3:
+
+发布日期: 09/29/2018
+
+本次发布的软件包仅适用于非主网的测试网。
+主要更新包括修正了压力测试中发现的一些问题，提高了子链系统的处理能力，相应的子链部署合约也进行了更新。
+新的子链部署合约需要和更新的软件包一起使用。
+
+**下载链接**
+
+VNODE+SCS 可执行文件包
+
+* [Binary package for Linux](https://github.com/MOACChain/moac-core/releases/download/v1.0.3/nuwa1.0.3.ubuntu.tar.gz)
+* [Binary package for Windows](https://github.com/MOACChain/moac-core/releases/download/v1.0.3/nuwa1.0.3.win.zip)
+* [Binary package for MAC OS](https://github.com/MOACChain/moac-core/releases/download/v1.0.3/nuwa1.0.3.mac.tar.gz)
+
+部署子链的合约文件
+
+* [SubChainProtocolBase](https://github.com/MOACChain/moac-core/releases/download/v1.0.3/SubChainProtocolBase.sol)
+* [VnodeProtocolBase](https://github.com/MOACChain/moac-core/releases/download/v1.0.3/VnodeProtocolBase.sol)
+* [SubChainBase](https://github.com/MOACChain/moac-core/releases/download/v1.0.3/SubChainBase.sol)
+
+### 文件风暴（FileStorm）1.0.1:
+
+发布日期: 08/27/2018
+
+
+[文件风暴 1.0.1](https://github.com/MOACChain/moac-core/releases/download/1.0.1/filestorm1.0.1.tar)
+
+可以使用[deploy.js](https://github.com/MOACChain/moac-core/releases/download/1.0.1/deploy.js) 在一个VNODE和3个SCS来部署一个子链.
+
+### 文件风暴（FileStorm）1.0.0:
+
+发布日期: 08/18/2018
+
+文件风暴（FileStorm）是一个通过墨客子链实现的IPFS存储平台。它需要专用的SCS客户端来部署和执行IPFS功能。当前的FileStorm SCS客户端可以接入墨客女娲版本 1.0.2。
+更多信息可以参考[FileStorm](https://github.com/MOACChain/moac-core/wiki/FileStorm)和[FileStorm使用指南](https://github.com/MOACChain/moac-core/wiki/FileStormUserGuide).
+
+**下载链接**
+
+FileStorm 子链共识协议:
+
+* [FileStorm 子链共识协议合约](https://github.com/MOACChain/moac-core/releases/download/v1.0/DeploySubChainBase.sol)
+
+FileStorm 子链合约:
+
+* [FileStorm Dapp子链合约](https://github.com/MOACChain/moac-core/releases/download/v1.0/FileStormMicroChain.sol)
+
+FileStorm 子链专用SCS客户端:
+
+* [Linux 可执行文件包](https://github.com/MOACChain/moac-core/releases/download/v1.0/filestorm.tar)
+<!-- * [Windows 可执行文件包]()
+* [MAC OS 可执行文件包]() -->
+
+
+### 墨客女娲版本 1.0.2:
+
+发布日期: 08/10/2018
+
+感谢墨客社区的大力支持，墨客主网顺利地从盘古版本升级到女娲。本次发布的主链节点和子链服务器1.0.2版本可以在主网和101测试网上运行子链。目前我们在测试网上已经部署了一些子链所需的服务，请参考[测试网101子链部署信息](https://nodes101.moac.io/) 和[如何运行SCS服务器](https://github.com/MOACChain/moac-core/wiki/MicroChainSCSMining).
+
+**下载链接**
+
+主链节点服务器（VNODE）
+
+* [Linux 可执行文件包](https://github.com/MOACChain/moac-core/releases/download/v1.0.2/nuwa-vnode1.0.2.ubuntu.tar.gz)
+* [Windows 可执行文件包](https://github.com/MOACChain/moac-core/releases/download/v1.0.2/nuwa-vnode1.0.2.win.zip)
+* [MAC OS 可执行文件包](https://github.com/MOACChain/moac-core/releases/download/v1.0.2/nuwa-vnode1.0.2.mac.tar.gz)
+   
+
+子链服务器（SCS）
+
+* [Linux 可执行文件包](https://github.com/MOACChain/moac-core/releases/download/v1.0.2/nuwa-scs1.0.2.ubuntu.tar.gz)
+* [Windows 可执行文件包](https://github.com/MOACChain/moac-core/releases/download/v1.0.2/nuwa-scs1.0.2.zip)
+* [MAC OS 可执行文件包](https://github.com/MOACChain/moac-core/releases/download/v1.0.2/nuwa-scs1.0.2.mac.tar.gz)
+
+
+### 墨客女娲版本 1.0.1:
+
+发布日期: 08/01/2018
+
+解决一些服务器无法正确接收event subscription的问题。
+
+### 墨客女娲版本 1.0.0:
+
+发布日期: 07/31/2018
+
+**主要更新：**
+
+* 墨客主链客户端（VNODE），可以在正式网络和测试网络连接子链服务器（SCS），以部署子链（MicroChain）。
+* 可以通过主链客户端在主链和测试链上部署子链，步骤可以参考WIKI部分说明. 
+* 主链客户端可以参与子链挖矿并获得奖励。
+* 提供一个使用POS共识的子链模板。
+
+
+**可用功能：**
+
+* 允许主网子链挖矿。
+* 支持子链分片。
+* 支持IPFS子链部署。
+* 支持无币区块链部署。
+
+**下载链接**
+
+主链节点服务器（VNODE）
+
+* [Binary package for Linux](https://github.com/MOACChain/moac-core/releases/download/v1.0.0/nuwa1.0.0.ubuntu.tar.gz)
+* [Binary package for Windows](https://github.com/MOACChain/moac-core/releases/download/v1.0.0/nuwa1.0.0.win.zip)
+* [Binary package for MAC OS](https://github.com/MOACChain/moac-core/releases/download/v1.0.0/nuwa1.0.0.mac.tar.gz)
+
+子链服务器（SCS）
+
+将于8月8日公布
+
+
+### 墨客盘古版本 0.8.4:
+
+发布日期: 06/30/2018
+
+本版本仅适用在测试网络（testnet, id=101）
+
+**主要更新**
+
+* 子链服务器(SCS)目前可以与测试网络连接，参与子链（MicroChain）的验证，并从中获得挖矿奖励.
+* 墨客链客户端（VNODE），可以连接测试网络和SCS服务器.
+* 测试链上可以部署子链，步骤可以参考WIKI部分说明. 
+
+**工具网站**
+
+* [MOAC explorer](http://explorer.moac.io/), (*mainnet*)：主网浏览器，可以看到区块状态，[帐号列表](), [发行的ERC20代币](http://explorer.moac.io/tokenlist20), 和 [发行的ERC721代币](http://explorer.moac.io/tokenlist721)
+* [MOAC testnet explorer](http://47.75.144.55:3000/home), (*testnet*)：测试网络浏览器。
+* [MOAC online wallet](https://moacwalletonline.com/): 可以使用KEYSTORE JSON文件来发送交易
+
+**墨客社区网站**
+
+* [Official Website](https://moac.io)：官方主网
+* [Blog/Medium](https://medium.com/@moac_io)
+* [Facebook](https://www.facebook.com/moacchain/)
+* [Twitter](https://twitter.com/moac_io)
+* [Reddit](https://www.reddit.com/r/MOAC/)
+* [LinkedIn](https://www.linkedin.com/company/moac-chain)
+* [Telegram Developers](https://t.me/MOACDevelopers)
+* [墨客中文电报群](https://t.me/moacchina)
+* [Youtube for Developers](https://www.youtube.com/channel/UC_U54wsGNrm_Yivj5bH9i7Q)
+
+### 墨客盘古 0.8.2 发布:
+
+发布日期: 04/30/2018
+
+This release is for both mainnet and testnet. 
+The mainnet was launched on April 30th, 2018.
+
+**主要更新**
+
+* Added the community message in the [genesis block](http://explorer.moac.io/block/0). 
+* Updated the system contract to fix future send issue.
+* The SCS ports were loaded and will be ready to use after the mainnet is launched and testing is finished for SCS.
+* Fixed an issue of pending transactions . 
+* Removed config file and put the configs in the source files.
+* [MOAC explorer](http://explorer.moac.io/), (*mainnet*)
+* [MOAC testnet explorer](http://47.75.144.55:3000/home), (*testnet*)
+
+### 墨客盘古 0.8.1 发布:
+
+发布日期: 04/18/2018
+
+This release is for testnet only. The mainnet will be available in late April.
+
+**主要更新**
+
+* The network ID changed to 99 (mainnet) and 101 (testnet) to adopt the EIP155 specification.
+* Fixed a previous "no data attached" issue in contract deploying.
+* Added config file vnodeconfig.json.
+* [MOAC explorer](http://explorer.moac.io/), (*new version connect to the testnet 101*)
+* [Mining], (*provided by third party， updated to the new testnet 101*)
+* [Faucet], (*provided by third party*)
+
+### 墨客盘古 0.8.0 发布:
+
+发布日期: 3/31/2018
+
+This release is for testnet only. The mainnet will be available in April.
+
+**主要更新**
+
+* V-node module，
+* Smart Contract Service (POS) module (*in April*)，
+* [chain3 lib](https://github.com/innowells/Chain3)，
+* [MOAC explorer](http://explorer.moac.io/),
+* [Mining], (*provided by third parties*)
+* [Wallets]， (*provided by third parties*)
+
+**可用功能：**
+
+* v-node mining
+* SCS mining
+* Sharding
+* System contract for auto trigger, hash lock
+* Subchain Protocol contract for SCS miner registration
+* Subchain contract for Dapp configuration and flush control
+* wallet
+
+### 可执行文件包:
+
+A stable release Pangu 0.8.2 is released April 30th, 2018.
+
+墨客主网络（mainnet，id=99）的默认路径为:
+
+	Mac: ~/Library/MoacNode
+	Linux: ~/.moac
+	Windows: %APPDATA%\MOAC
+
+测试网络（testnet，id=101）的默认路径为:
+
+	Mac: ~/Library/MoacNode/testnet
+	Linux: ~/.moac/testnet
+	Windows: %APPDATA%\MOAC\testnet
+
+
+#### Debian/Ubuntu/CentOS Linux
+ 
+ [Binary package for Linux](https://github.com/MOACChain/moac-core/releases/download/0.8.2/pangu0.8.2.ubuntu.tar.gz)
+ 
+Untar the file using tar, under the directory
+
+To start connecting with mainnet
+	./moac
+
+To start connecting with testnet
+	./moac --testnet
+
+To enable the console, can use:
+
+	./moac console
+	./moac --testnet console
+
+A testnet directory will be created under 
+
+	$HOME/.moac/testnet/
+and some info should be seen as:
+
+    INFO [03-24|11:24:26.506] 86161:IPC endpoint closed: /home/user/.moac/testnet/moac.ipc 
+
+from another terminal, run moac again to attach the running node
+
+	./moac attach $HOME/.moac/testnet/moac.ipc
+
+To see the help, use
+
+	./moac --help
+
+#### Windows
+
+[Binary package for Windows](https://github.com/MOACChain/moac-core/releases/download/0.8.2/pangu0.8.2.windows.zip)
+
+This version only work with "--test" option, not working with mainnet yet.
+
+Untar the file using tar, under the directory 
+
+	moac.exe
+	moac.exe --testnet
+
+To see the help, use 
+	moac.exe --help
+
+To enable the console, can use: 
+
+	moac.exe --testnet console
+
+A testnet directory will be created under 
+
+	C:\Users\xxxxxx\AppData\Roaming\MoacNode 
+	
+and some info should be seen as:
+
+	IPC endpoint opened: \\.\pipe\moac.ipc
+	
+from another terminal, run moac again to attach the running node
+
+	./moac.exe attach \\.\pipe\moac.ipc
+
+#### 命令行中的例子
+
+If console is not open, open the console using the instructions from above.
+
+1. from console prompt, create coinbase account
+
+	`> personal.newAccount()`
+
+2. from console prompt, start mining by running
+
+	`> miner.start()`
+
+3. check if miner has mined any moac by checking:
+	
+	`> mc.getBalance(mc.accounts[0])`
+
+4. create another account
+
+	`> personal.newAccount()`
+
+5. See the accounts in the node
+
+	`> mc.accounts`
+
+#### 命令行下的Javascript文件例子
+
+MOAC can execute Javascript functions under the console.
+
+The binary package contains a js file for testing purpose.
+To use, under the console:
+
+	> loadScript("mctest.js")
+
+There are three Javascript functions:
+
+Display the moac balances of the accounts at the current node
+
+`function checkBalance()`
+
+	> checkBalance()
+
+Send moac from one account to another
+
+`function Send(src, passwd, target, value)`
+
+
+	> Send(mc.accounts[0], '', mc.accounts[1], 0.1)
+
+FutureSend is a good example to test the System Contract
+performance. It will send a mc transaction using the 
+System Contract at a certain block. If the input block
+number is smaller than current block number, the transaction
+will fail.
+
+`function FutureSend(src, passwd, target, value, block, revertable)`
+
+	> FutureSend(mc.accounts[0], '', mc.accounts[1], 0.1, 20000, 0)
+
+The transaction will happen when blocknumber = 20000.
+
+#### 墨客社区创世语
+
+在墨客链启动前，向社区征集了创世语，并储存在一个智能合约中。使用者可以通过下面的调用来查看创世语。
+
+The binary package contains a sysinfo_test.js file. It contains four lines:
+
+	var infoabi='[{"constant ......}]';
+	var infoaddress='0x0000000000000000000000000000000000000088';
+	var infoContract=mc.contract(JSON.parse(infoabi));
+	var genesisInfo=infoContract.at(infoaddress);
+
+To use the function, first load the file under the console:
+
+	> loadScript("sysinfo_test.js")
+
+Then run the function:
+	
+	> genesisInfo.CommunityMsg()
+	"313936392C415250414E45542E313937332C5443502F49502E20323030392C426974636F696E2E2068656C6C6F2032303138EFBC8C4D4F414320697320636F6D696E672E"
+
+These messages are in HEX format, you need a [HEX to ASCII converter](https://www.rapidtables.com/convert/number/hex-to-ascii.html) to see the texts.
+There are other messages in the contract made by the contributors. 
+Thanks very much for all who contributes to the project!
